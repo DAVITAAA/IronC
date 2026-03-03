@@ -1,0 +1,126 @@
+.contact-cta {
+  position: relative;
+  background: var(--steel-mid);
+  padding: 80px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--steel-border);
+}
+
+.contact-cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact-cta__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--steel-border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--steel-border) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.2;
+}
+
+.contact-cta__orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -200px;
+  top: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(138,155,176,0.08) 0%, transparent 70%);
+  filter: blur(40px);
+}
+
+.contact-cta__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-cta__title {
+  font-size: var(--text-h2);
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.contact-cta__title span {
+  color: var(--gold);
+}
+
+.contact-cta__text {
+  font-size: 17px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.contact-cta__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-cta__btn {
+  font-size: 17px !important;
+  padding: 18px 28px !important;
+}
+
+.contact-cta__tel {
+  font-size: 17px !important;
+}
+
+/* Right cards */
+.contact-cta__right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-cta__card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--steel-panel);
+  border: 1px solid var(--steel-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  transition: var(--transition);
+}
+
+.contact-cta__card:hover {
+  border-color: var(--gold);
+  transform: translateX(6px);
+}
+
+.contact-cta__card-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.contact-cta__card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.contact-cta__card-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+@media (max-width: 900px) {
+  .contact-cta__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-cta__actions {
+    flex-direction: column;
+  }
+}
